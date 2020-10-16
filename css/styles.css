@@ -1,0 +1,23 @@
+body {
+    font-family: 'Courgette', cursive;
+}
+/* .wrap {
+    background-image: url(../images/delicousp.jpg);
+    color: white;
+    height: 500px;
+    background-repeat: no-repeat;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+.three {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color: white;
+    font-size: 100px;
+}
+.three h {
+    font-size: 75px;
+}
