@@ -25,6 +25,28 @@ body {
    background-color: red;
 }
 .contact ul li {
-    background-color: grey;
+    background-color: indianred;
     list-style: none;
+    width: 100%;
+}
+.about {
+    font-size: 25px;
+}
+.section {
+    text-align: center;
+}
+.vuuu h2 {
+    text-align: center;
+}
+#section3{
+    background-image: url(https://image.freepik.com/free-photo/slice-delicious-pizza-with-ingredients-textured-wooden-background_23-2147926094.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+}
+.row .col-md-4 {
+    color: white;
+    font-size: 30px;
+    list-style-type: none;
 }
