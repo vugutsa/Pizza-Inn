@@ -1,6 +1,9 @@
 body {
     font-family: 'Courgette', cursive;
 }
+body {
+    background-color: lightgrey;
+}
 /* .wrap {
     background-image: url(../images/delicousp.jpg);
     color: white;
@@ -45,8 +48,8 @@ body {
     text-align: center;
     background-size: cover;
 }
-.row .col-md-4 {
+.row .col-md-3 {
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     list-style-type: none;
 }
