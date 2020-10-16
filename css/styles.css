@@ -21,3 +21,6 @@ body {
 .three h {
     font-size: 75px;
 }
+.wrapper nav {
+   background-color: red;
+}
