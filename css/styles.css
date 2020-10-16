@@ -24,3 +24,7 @@ body {
 .wrapper nav {
    background-color: red;
 }
+.contact ul li {
+    background-color: grey;
+    list-style: none;
+}
