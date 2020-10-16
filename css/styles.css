@@ -4,25 +4,41 @@ body {
 body {
     background-color: lightgrey;
 }
-/* .wrap {
-    background-image: url(../images/delicousp.jpg);
-    color: white;
-    height: 500px;
-    background-repeat: no-repeat;
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-} */
+.mercie {
+    animation: animationPizza-Inn 2s infinite;  
+}
+@keyframes animationPizza-Inn {
+    0%{color: red;}
+    25%{color: #bf55ec;}
+    50%{color: #fff;}
+    100%{color: #ddb9ec;}
+}
+.mercie {
+    font-size: 50px;
+}
+.text {
+    animation: animationWelcome 2s infinite;
+}
+@keyframes animationWelcome {
+    0%{color: red;}
+    25%{color: greenyellow;}
+    50%{color: #fff;}
+    100%{color: greenyellow;}
+}
 .three {
     position: absolute;
     top: 30%;
     left: 40%;
     color: white;
-    font-size: 100px;
+}
+.text {
+    font-size: 75px;
 }
 .three h {
     font-size: 75px;
+}
+.vuuu p {
+    font-size: 30px;
 }
 .wrapper nav {
    background-color: red;
@@ -54,8 +70,4 @@ body {
     color: white;
     font-size: 20px;
     list-style-type: none;
-}
-.social a i {
-    top: 0%;
-    position: absolute;
 }
