@@ -121,7 +121,10 @@
   <div class="jumbotron">
 <h1>ORDERS</h1>
 <div class="orders">
+  <div class="row">
+    <div class="col-md-5">
   <form>
+    <br>
     <label for="flavor">Type of Pizza Flavor:</label>
     <select id="flavor" name="flavor" form="pizza">
       <option value="pepperoni.">Pepperoni.@ksh500</option>
@@ -177,9 +180,34 @@
     </select>
     <br>
     <div class="submit">
-      <button type="button" class="btn btn-success">Submit</button
+      <button type="button" class="btn btn-success"onclick="pizza()" >Submit</button>
     </div>
 </form>
+</div>
+<div class="col-md-5">
+<table class="table">
+<tr>
+   <th>Flavor.</th>
+   <th>Toppings.</th>
+   <th>Crust.</th>
+   <th>Size.</th>
+   <th>Number of Pizza.</th>
+
+</tr>
+<tr>
+  <td id="pizzaF"></td>
+  <td id="pizzaT"></td>
+  <td id="pizzaC"></td>
+  <td id="pizzaS"></td>
+  <td id="pizzaN"></td>
+</tr>
+
+
+</table>
+
+
+</div>
+
 </div> 
         
 </div>

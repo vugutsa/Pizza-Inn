@@ -119,3 +119,9 @@ body {
 #social a:hover {
   color: black;  
 }
+option {
+    width: 300%;
+}
+.table tr {
+  border: 2px solid black;
+}
