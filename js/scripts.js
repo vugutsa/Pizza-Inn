@@ -155,7 +155,19 @@ $(document).ready(function () {
             } else {
                 return 1220;
             }
+        } else if (this.size === "mega") {
+        if (this.crust === "thin") {
+            return 1460;
+        } else if (this.crust === "flatbread") {
+            return 1410;
+        } else if (this.crust === "pizzabagels") {
+            return 1405;
+        } else if (this.crust === "sicilian") {
+            return 1415;
+        } else {
+            return 1520;
         }
+    }
     }
     Pizza.prototype.getTotalPrice = function () {
         return this.getFlavorPrice() + this.getCrustPrice() + this.getToppingPrice() + this.getSizePrice();
@@ -179,6 +191,6 @@ $(document).ready(function () {
      $("#crust").val("");
      $("#size").val("");
     });
-
+ 
 
 });
