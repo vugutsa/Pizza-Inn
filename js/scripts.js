@@ -185,8 +185,7 @@ $(document).ready(function () {
 
         var newPizzaOrder = new Pizza(flavorP, toppingsP, crustP, sizeP);
         newOrderP.push(newPizzaOrder);
-    //  console.log(newOrderP);
-     console.log(newPizzaOrder);
+
 
      $("#flavor").val("");
      $("#toppings").val("");
@@ -194,42 +193,36 @@ $(document).ready(function () {
      $("#size").val("");
 
      amount = 0;
-    //  for (let i= 0; i <newOrderP.length; i++){
-    //            amount += newOrderP[i].newPizzaOrder();
-    //  }
+     for (let i= 0; i <newOrderP.length; i++){
+               amount += newOrderP[i].getTotalPrice();
+     }
   
-     $("#orders2").append(
+     $("#orders1").append(
          "<tr>" +
          '<td scope="header">' +
          newPizzaOrder.flavor +
-         
-         newPizzaOrder.toppings +
-           
-         newPizzaOrder.crust+
-        
-         newPizzaOrder.size +
-         
+         "@ksh" +
          newPizzaOrder.getFlavorPrice() +
          "<td>" +
-         "</td>" +
+         newPizzaOrder.toppings +
+         "@ksh" +
          newPizzaOrder.getToppingPrice() +
+           "<td>" +
+
+         newPizzaOrder.crust+
          "@ksh" +
          newPizzaOrder.getCrustPrice() +
-         "@ksh" +
-        //  newPizzaOrder.getSizePrice() + 
-        //  "@ksh" + 
+        "<td>" +
+         newPizzaOrder.size +
+         "<td>" +
          newPizzaOrder.getTotalPrice() +
-         "</td>" +
-         "</th>"
+         "<td>" +
+         "</tr>"
      );
 
     });
  
     $("#totals").append ("");
-    // if (newOrder.length > 0) {
-    //     $("#order-here").empty();
-    //     $("#order-here").append("Add Another Order");
-    // }
     $("#tamount").fadeIn();
     $("#t2").fadeIn();
     $("#form4").fadeIn();
@@ -253,18 +246,18 @@ $(document).ready(function () {
         $(".checkout-text").hide();
         $("#t2").hide();
         $("#tamount").empty();
-        if (deliveryDetails === "deliver") {
+        if (deliveryDetails === "1") {
             $(".location").show();
             $(".p1").show();
             $("#tamount").empty();
             $("#amount1").append(250);
-            amount= 250;
+            amount += 250;
             $("#tamount").empty();
             $("#tamount").empty();
         $("#tamount").append(amount);
         $(".p2").show();
 
-            $("#tamount").append(amount);
+            
         } else {
             alert(clientName + ": Your total bill is Ksh. " + amount + ". Your order will be ready for collection in the next one hours");
         }
@@ -281,6 +274,6 @@ $(document).ready(function () {
         $("#tamount").empty();
         $("#tamount").append(totalAmount);
         $(".p2").show();
-        alert(clientName + ": Your total bill is Ksh. " + amount + ". Your order will be delivered to " + court + ", " + doorNumber + " in the next one hours");
+        alert(clientName + ": Your total amount is Ksh. " + amount + ". Your order will be delivered shortly to " + court + ", " + doorNumber + " in the next one hour");
     });
 });
