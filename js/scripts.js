@@ -186,7 +186,15 @@ $(document).ready(function () {
         var newPizzaOrder = new Pizza(flavorP, toppingsP, crustP, sizeP);
         newOrderP.push(newPizzaOrder);
     //  console.log(newOrderP);
-     console.log(newPizzaOrder);
+
+    //  console.log(newPizzaOrder);
+    alert(newPizzaOrder.getFlavorPrice())
+    alert(newPizzaOrder.getToppingPrice())
+     alert(newPizzaOrder.getCrustPrice())
+
+     alert(newPizzaOrder.getTotalPrice())
+
+     
 
      $("#flavor").val("");
      $("#toppings").val("");
@@ -220,7 +228,7 @@ $(document).ready(function () {
         //  "@ksh" + 
          newPizzaOrder.getTotalPrice() +
          "</td>" +
-         "</th>"
+         "<th>"
      );
 
     });
