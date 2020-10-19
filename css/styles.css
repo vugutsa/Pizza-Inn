@@ -5,7 +5,7 @@ body {
     background-color: lightgrey;
 }
 #section1 {
-    background-image: url("../images/photo-1574126154517-d1e0d89ef734.jpeg");
+    background-image: url("https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max");
     background-size: cover;
     width: 100%;
     height: 500px;
@@ -36,6 +36,9 @@ body {
 }
 .mercie {
     font-size: 50px;
+}
+.hidden {
+    display: none;
 }
 .text {
     animation: animationWelcome 2s infinite;

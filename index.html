@@ -123,9 +123,11 @@
 
     <div id="section4">
       <div class="jumbotron">
-        <h1>ORDERS</h1>
         <div class="orders" id="order-here">
           <div class="row">
+            <div class="form3">
+              <h1>ORDERS</h1>
+            </div>
             <div class="col-md-5">
               <form id="form">
                 <br>
@@ -191,7 +193,8 @@
                 </div>
               </form>
             </div>
-            <div class="col-md-5">
+            
+            <div class="col-md-5"  id="form4">
               <div class="header">
                 <h1>Order here.</h1>
               <table class="table">
@@ -214,23 +217,29 @@
                 </div>
                  <tbody id="totals"></tbody>
               </table>
-              <p class="p1">Your delivery fee is ksh; <span id="amount1"></span></p>
-              <p class="p2">Your total amount is ksh; <span id="tamount"></span></p><br><br>
+              
+              <p class="p1 hidden">Your delivery fee is ksh; <span id="amount1"></span></p>
+              <p class="p2 hidden">Your total amount is ksh; <span id="tamount"></span></p><br><br>
               <button class="check" id="t2">Checkout</button>
                <div class="checkout-text hidden">
-              <div class="deliveryform">
+                 <h2>Checking delivery.</h2>
+                 <div class="deliveryform">
+                 <form id="form6">
+                  <input type="text" class="form-control" id="d1" placeholder="Your name" required />
                   <label for="inputGroupSelect01">Delivery details.</label>
                 <select class="custom-select" id="delivery-details">
                   <option selected>Choose...</option>
-                  <option value="1">Deliver at your doorstep.SRTY</option>
+                  <option value="1">Deliver at your doorstep.</option>
                   <option value="2">Collection at the restaurant.</option>
                 </select>
-
                 <button id="amountD">Delivery</button>
-              </div>
-              <div class="location hidden">  
+                 </form>
+                </div>
+              
+              <div class="location hidden" > 
                <div class="location1">
-                 <h1>Enter your destination</h1>
+                 <form id="form2">
+                 <h2>Enter your destination</h2>
                   <div class="form-group">
                    <label>Court</label>
                    <input type="text" class="form-control" id="court" placeholder="Type here your name" required /> 
@@ -241,18 +250,20 @@
                         required />
                 </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
-               </div>
+                </form>
+                </div>
 
               
 
             </div>
 
           </div>
-
+       
         </div>
       </div>
     </div>
     </div>
+ 
   </div>
       <br>
       <!-- this is the end of section4 -->
