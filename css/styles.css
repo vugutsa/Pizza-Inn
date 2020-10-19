@@ -128,3 +128,6 @@ option {
 #form {
     background-color:lightcoral;
 }
+.menu p {
+    font-size: 20px;
+}
