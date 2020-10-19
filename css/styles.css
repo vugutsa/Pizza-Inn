@@ -87,7 +87,7 @@ body {
     text-align: center;
 }
 #section3{
-    background-image: url(https://image.freepik.com/free-photo/slice-delicious-pizza-with-ingredients-textured-wooden-background_23-2147926094.jpg);
+    background-image: url("../images/slice-delicious-pizza-with-ingredients-textured-wooden-background_23-2147926094.jpg");
     height: 400px;
     background-repeat: no-repeat;
     text-align: center;
@@ -97,6 +97,9 @@ body {
     color: white;
     font-size: 20px;
     list-style-type: none;
+}
+.location hidden {
+    display: none;
 }
 /* .social {
     padding: 40px 5px;

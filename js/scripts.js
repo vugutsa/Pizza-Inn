@@ -5,7 +5,7 @@ $(document).ready(function () {
         this.crust = crust;
         this.size = size;
     }
-    var newOrder = [];
+    var newOrderP = [];
     var amount = 0;
     Pizza.prototype.getFlavorPrice = function () {
         if (this.size === "small") {
@@ -173,7 +173,6 @@ $(document).ready(function () {
         return this.getFlavorPrice() + this.getCrustPrice() + this.getToppingPrice() + this.getSizePrice();
     }
     amount = 0;
-    amount = newOrder.getTotalPrice();
     console.log(amount);
     $("#form").submit(function (event) {
         event.preventDefault();
@@ -183,14 +182,92 @@ $(document).ready(function () {
         var sizeP = $("#size").val();
 
         var newPizzaOrder = new Pizza(flavorP, toppingsP, crustP, sizeP);
-        newOrder.push(newPizzaOrder);
-     console.log(newOrder);
+        newOrderP.push(newPizzaOrder);
+     console.log(newOrderP);
 
      $("#flavor").val("");
      $("#toppings").val("");
      $("#crust").val("");
      $("#size").val("");
     });
+    amount = 0;
+    for (let i= 0; i <newOrderP.length; i++){
+              amount += newOrderP[i].newPizzaOrder();
+    }
  
+    $("#orders2").append(
+        "<tr>" +
+        "<th scope=header>" +
+        newPizzaOrder.flavor +
+        "@ksh" +
+        newPizzaOrder.toppings +
+        "@ksh" +
+        newPizzaOrder.crust +
+        "@ksh" +
+        newPizzaOrder.size +
+        "@ksh" +
+        newPizzaOrder.getFlavorPrice() +
+        "<td>" +
+        "</td>" +
+        newPizzaOrder.getToppingPrice() +
+        "@ksh" +
+        newPizzaOrder.getCrustPrice() +
+        "@ksh" +
+        newPizzaOrder.getSizePrice() + 
+        "@ksh" + 
+        newPizzaOrder.getTotalPrice() +
+        "</td>" +
+        "</th>"
+    );
+    $("totals").append ("");
+    $("#amount1").fadeIn();
+    $("#tamount").fadeIn();
+    
+    $("totals").empty();
+    $("totals").append(amount);
 
+    $("#delivery-details").click(function () {
+      $(".checkout-text").show();
+    });
+
+    // $("#checkout-form").submit(function (event) {
+    //     event.preventDefault();
+    //     var name = $("#name").val();
+    //     var deliveryOption = $("#delivery-option").val();
+    //     customerName = name;
+    //     $("#name").val("");
+    //     $("#delivery-option").val("");
+    //     $(".checkout-options").hide();
+    //     $("#checkout").hide();
+    //     $("#finalAmount").empty();
+    //     if (deliveryOption === "deliver") {
+    //         $(".location").show();
+    //         $(".delivery-cost").show();
+    //         $("#finalAmount").empty();
+    //         $("#delivery-amount").append(300);
+    //         totalAmount += 300;
+    //         $("#finalAmount").empty();
+    //         $("#finalAmount").empty();
+    //     $("#finalAmount").append(totalAmount);
+    //     $(".finalAmount").show();
+
+    //         $("#finalAmount").append(totalAmount);
+    //     } else {
+    //         alert(customerName + ": Your total bill is Ksh. " + totalAmount + ". Your order will be ready for collection in the next one hours");
+    //     }
+    // });
+
+    // $("#location-form").submit(function (event) {
+    //     event.preventDefault();
+    //     var estateEntered = $("#estate").val();
+    //     var houseNumberEntered = $("#house-number").val();
+    //     estate = estateEntered;
+    //     houseNumber = houseNumberEntered;
+    //     $("#checkout").hide();
+    //     $(".location").hide();
+    //     $("#finalAmount").empty();
+    //     $("#finalAmount").append(totalAmount);
+    //     $(".finalAmount").show();
+    //     alert(customerName + ": Your total bill is Ksh. " + totalAmount + ". Your order will be delivered to " + estate + ", " + houseNumber + " in the next one hours");
+    // });
 });
